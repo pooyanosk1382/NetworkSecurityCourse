@@ -43,3 +43,6 @@ P^-1 P K = P^-1 C
 K = P^-1 C
 
 So if we find the inverse of P we can attack very easy.
+
+# Bias
+In here we will give all the possible inputs to the 8th S-box to find the bias of outputs. We can see that S-Box has a uniform distribution.
