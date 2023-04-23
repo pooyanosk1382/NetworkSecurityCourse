@@ -30,11 +30,16 @@ As we know in Affine cipher we just have an equation with two values of 'a' and 
 # Hill Attack
 As we know the structure of Hill cipher is:
 
-$ \begin{bmatrix} P1 & P2 & P3 \end{bmatrix} \begin{bmatrix} K1 & K2 & K3\\ K4 & K5 & K6\\ K7 & K8 & K9 \end{bmatrix} = \begin{bmatrix} C1 & C2 & C2 \end{bmatrix} $
+[p1 p2 p3] K = [c1 c2 c3]
  
 But if we concat three block of plain text and three block of cipher text we will have:
-$ \begin{bmatrix} P1 & P2 & P3\\ P4 & P5 & P6\\ P7 & P8 & P9 \end{bmatrix} \begin{bmatrix} K1 & K2 & K3\\ K4 & K5 & K6\\ K7 & K8 & K9 \end{bmatrix} = \begin{bmatrix} C1 & C2 & C3\\ C4 & C5 & C6\\ C7 & C8 & C9 \end{bmatrix} $
+
+PK = C
+
 Now for attacking to Hill cipher we can do:
-$ P^{-1} \begin{bmatrix} P1 & P2 & P3\\ P4 & P5 & P6\\ P7 & P8 & P9 \end{bmatrix} \begin{bmatrix} K1 & K2 & K3\\ K4 & K5 & K6\\ K7 & K8 & K9 \end{bmatrix} = P^{-1} \begin{bmatrix} C1 & C2 & C3\\ C4 & C5 & C6\\ C7 & C8 & C9 \end{bmatrix} $
-$ \begin{bmatrix} K1 & K2 & K3\\ K4 & K5 & K6\\ K7 & K8 & K9 \end{bmatrix} = P^{-1} \begin{bmatrix} C1 & C2 & C3\\ C4 & C5 & C6\\ C7 & C8 & C9 \end{bmatrix} $
+
+$ P^{-1}PK = P^{-1}C $
+
+$ K = P^{-1}C $
+
 So if we find the inverse of P we can attack very easy.
