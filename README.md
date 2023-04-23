@@ -23,3 +23,6 @@ In cryptography, a substitution cipher is a method of encrypting in which units 
 
 # Shift Attack
 If we want to attack we just need one plain word and one cipher word to compare them and find the difference.
+
+# Affine Attack
+As we know in Affine cipher we just have an equation with two values of 'a' and 'b', so for attacking we just need to have a brute force on a and b.
