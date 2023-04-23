@@ -28,3 +28,11 @@ If we want to attack we just need one plain word and one cipher word to compare 
 As we know in Affine cipher we just have an equation with two values of 'a' and 'b', so for attacking we just need to have a brute force on a and b.
 
 # Hill Attack
+As we know the structure of Hill cipher is:
+$ \begin{bmatrix} P1 & P2 & P3 \end{bmatrix} \begin{bmatrix} K1 & K2 & K3\\ K4 & K5 & K6\\ K7 & K8 & K9 \end{bmatrix} = \begin{bmatrix} C1 & C2 & C2 \end{bmatrix} $
+But if we concat three block of plain text and three block of cipher text we will have:
+$ \begin{bmatrix} P1 & P2 & P3\\ P4 & P5 & P6\\ P7 & P8 & P9 \end{bmatrix} \begin{bmatrix} K1 & K2 & K3\\ K4 & K5 & K6\\ K7 & K8 & K9 \end{bmatrix} = \begin{bmatrix} C1 & C2 & C3\\ C4 & C5 & C6\\ C7 & C8 & C9 \end{bmatrix} $
+Now for attacking to Hill cipher we can do:
+$ P^{-1} \begin{bmatrix} P1 & P2 & P3\\ P4 & P5 & P6\\ P7 & P8 & P9 \end{bmatrix} \begin{bmatrix} K1 & K2 & K3\\ K4 & K5 & K6\\ K7 & K8 & K9 \end{bmatrix} = P^{-1} \begin{bmatrix} C1 & C2 & C3\\ C4 & C5 & C6\\ C7 & C8 & C9 \end{bmatrix} $
+$ \begin{bmatrix} K1 & K2 & K3\\ K4 & K5 & K6\\ K7 & K8 & K9 \end{bmatrix} = P^{-1} \begin{bmatrix} C1 & C2 & C3\\ C4 & C5 & C6\\ C7 & C8 & C9 \end{bmatrix} $
+So if we find the inverse of P we can attack very easy.
