@@ -26,3 +26,5 @@ If we want to attack we just need one plain word and one cipher word to compare 
 
 # Affine Attack
 As we know in Affine cipher we just have an equation with two values of 'a' and 'b', so for attacking we just need to have a brute force on a and b.
+
+# Hill Attack
