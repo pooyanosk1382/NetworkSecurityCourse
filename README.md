@@ -23,3 +23,23 @@ In cryptography, a substitution cipher is a method of encrypting in which units 
 
 # Shift Attack
 If we want to attack we just need one plain word and one cipher word to compare them and find the difference.
+
+# Affine Attack
+As we know in Affine cipher we just have an equation with two values of 'a' and 'b', so for attacking we just need to have a brute force on a and b.
+
+# Hill Attack
+As we know the structure of Hill cipher is:
+
+[p1 p2 p3] K = [c1 c2 c3]
+ 
+But if we concat three block of plain text and three block of cipher text we will have:
+
+PK = C
+
+Now for attacking to Hill cipher we can do:
+
+P^-1 P K = P^-1 C
+
+K = P^-1 C
+
+So if we find the inverse of P we can attack very easy.
