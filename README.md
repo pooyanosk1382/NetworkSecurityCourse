@@ -40,9 +40,9 @@ PK = C
 
 Now for attacking to Hill cipher we can do:
 
-$P^-1 P K = P^-1 C$
+$P^{-1} P K = P{^-1} C$
 
-K = P^-1 C
+$K = P^{-1} C$
 
 So if we find the inverse of P we can attack very easy.
 
