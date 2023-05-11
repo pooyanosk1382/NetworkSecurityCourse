@@ -57,3 +57,19 @@ It is of historical significance in the search for a polynomial-time determinist
 Gary L. Miller discovered the test in 1976; Miller's version of the test is deterministic, but its correctness relies on the unproven extended Riemann hypothesis. Michael O. Rabin modified it to obtain an unconditional probabilistic algorithm in 1980. 
 
 The algorithm can be written in pseudocode as follows. The parameter k determines the accuracy of the test. The greater the number of rounds, the more accurate the result.
+  Input #1: n > 2, an odd integer to be tested for primality
+  Input #2: k, the number of rounds of testing to perform
+  Output: “composite” if n is found to be composite, “probably prime” otherwise
+
+  let s > 0 and d odd > 0 such that n − 1 = 2sd  # by factoring out powers of 2 from n − 1
+  repeat k times:
+      a ← random(2, n − 2)  # n is always a probable prime to base 1 and n − 1
+      x ← ad mod n
+      repeat s times:
+          y ← x2 mod n
+          if y = 1 and x ≠ 1 and x ≠ n − 1 then # nontrivial square root of 1 modulo n
+              return “composite”
+          x ← y
+      if y ≠ 1 then
+          return “composite”
+  return “probably prime”
