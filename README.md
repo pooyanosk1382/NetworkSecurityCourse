@@ -76,3 +76,4 @@ The algorithm can be written in pseudocode as follows. The parameter k determine
     return “probably prime”
 
 # Elgamal
+In cryptography, the ElGamal encryption system is an asymmetric key encryption algorithm for public-key cryptography which is based on the Diffie–Hellman key exchange. It was described by Taher Elgamal in 1985.
