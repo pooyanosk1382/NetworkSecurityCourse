@@ -77,3 +77,19 @@ The algorithm can be written in pseudocode as follows. The parameter k determine
 
 # Elgamal
 In cryptography, the ElGamal encryption system is an asymmetric key encryption algorithm for public-key cryptography which is based on the Diffie–Hellman key exchange. It was described by Taher Elgamal in 1985.
+     
+    1.Bob generates public and private keys: 
+      Bob chooses a very large number q and a cyclic group Fq.
+      From the cyclic group Fq, he choose any element g and
+      an element a such that gcd(a, q) = 1.
+      Then he computes h = ga.
+      Bob publishes F, h = ga, q, and g as his public key and retains a as private key.
+    2.Alice encrypts data using Bob’s public key : 
+      Alice selects an element k from cyclic group F 
+      such that gcd(k, q) = 1.
+      Then she computes p = gk and s = hk = gak.
+      She multiples s with M.
+      Then she sends (p, M*s) = (gk, M*s).
+    3.Bob decrypts the message : 
+      Bob calculates s′ = pa = gak.
+      He divides M*s by s′ to obtain M as s = s′
