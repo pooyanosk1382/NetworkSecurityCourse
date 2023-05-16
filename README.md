@@ -93,3 +93,5 @@ In cryptography, the ElGamal encryption system is an asymmetric key encryption a
     3.Bob decrypts the message : 
       Bob calculates s′ = pa = gak.
       He divides M*s by s′ to obtain M as s = s′
+
+# Diffe-Hellman key exchange
