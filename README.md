@@ -95,3 +95,4 @@ In cryptography, the ElGamal encryption system is an asymmetric key encryption a
       He divides M*s by s′ to obtain M as s = s′
 
 # Diffe-Hellman key exchange
+The Diffie Hellman key exchange algorithm can be used to encrypt; one of the first schemes to do is ElGamal encryption. One modern example of it is called Integrated Encryption Scheme, which provides security against chosen plain text and chosen clipboard attacks.
