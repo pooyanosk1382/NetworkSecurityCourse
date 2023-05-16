@@ -74,3 +74,5 @@ The algorithm can be written in pseudocode as follows. The parameter k determine
         if y ≠ 1 then
             return “composite”
     return “probably prime”
+
+# Elgamal
